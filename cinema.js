@@ -16,6 +16,10 @@ const clearContent = () => {
     contentBlock.innerHTML = ''
 };
 
+const showFilms = () => {
+    clearContent();
+
+
 const moviesList = document.createElement('ul');
 contentBlock.append(moviesList);
 
@@ -24,8 +28,6 @@ for (const movie of movies) {
     const movieItem = document.createElement('li')
     movieItem.textContent = `${movie.title} - ${movie.isAvailable ? 'Доступен' : 'Не доступен'}`
     moviesList.append(movieItem);
+    }
 }
-
-showFilmsBtn.addEventListener('click', ()=>{
-
-})
+showFilmsBtn.addEventListener('click', showFilms )
